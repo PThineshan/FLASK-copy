@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+    <style>
+        table tr {
+            counter-increment: row-num;
+        }
+        table tr td:first-child::before {
+            content: counter(row-num) ". ";
+        }
+    </style>
+
+    <legend class="border-bottom mb-4 ">Reviews with Spam Results</legend>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Reviews</th>
+          <th scope="col">Spam_Results</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for post in posts %}
+            <tr>
+                <td></td>
+                <td>{{post["content"]}}</td>
+               <td>{{post["result"]}}</td>
+            </tr>
+         {% endfor %}
+
+      </tbody>
+    </table>
+
+    <a href = "/home">Go back to home</a>
+{% endblock content %}
