@@ -6,7 +6,7 @@ backcall==0.1.0
 bcrypt==3.1.6
 bleach==3.1.0
 bootstrap-py==0.7.0
-certifi==2018.11.29
+certifi==2022.12.7
 cffi==1.12.2
 chardet==3.0.4
 Click==7.0
